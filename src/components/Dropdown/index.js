@@ -6,19 +6,9 @@ import {
   Text,
 } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-const Items = [
-  { id: 0, title: "Car loan" },
-  { id: 1, title: "Green car loan" },
-  { id: 2, title: "Home improvements" },
-  { id: 3, title: "Green home improvements" },
-  { id: 4, title: "Wedding" },
-  { id: 5, title: "Education expenses" },
-  { id: 6, title: "Graduate" },
-];
-
-export default function Dropdown({ placeholder }) {
+export default function Dropdown({ placeholder, items }) {
   const [pressed, setPressed] = useState(false);
   const onPress = () => {
     setPressed((previousState) => !previousState);
@@ -60,7 +50,7 @@ export default function Dropdown({ placeholder }) {
         }}
       >
         <FlatList
-          data={Items}
+          data={items}
           style={{
             height: pressed ? 120 : 0,
           }}

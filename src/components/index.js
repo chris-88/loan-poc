@@ -6,6 +6,7 @@ import Selector from "./Selector";
 import ToggleButton from "./ToggleButton";
 import TextBlock from "./TextBlock";
 import Dropdown from "./Dropdown";
+import EuroInput from "./EuroInput";
 
 export {
   Header,
@@ -16,4 +17,5 @@ export {
   ToggleButton,
   TextBlock,
   Dropdown,
+  EuroInput,
 };
