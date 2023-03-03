@@ -4,36 +4,21 @@ import {
   Title,
   ProgressButton,
   ToggleButton,
+  TextBlock,
+  Dropdown,
 } from "../../../components";
 
 export default function LoanScreen2({ width }) {
   return (
     <View style={{ padding: 16, width }}>
       <PageHeading title={"Get a quick quote"} />
-      <Text
-        style={{
-          fontFamily: "OpenSans_400Regular",
-          fontSize: 16,
-          paddingBottom: 20,
-        }}
-      >
-        Find out how much you might be able to borrow before you apply - this
-        won't affect your credit rating.
-      </Text>
+      <TextBlock
+        text={
+          "Find out how much you might be able to borrow before you apply - this won't affect your credit rating"
+        }
+      />
       <Title title={"What is the purpose of your loan?"} />
-      <View
-        style={{
-          marginTop: 12,
-          padding: 12,
-          borderColor: "#dcdcdc",
-          borderWidth: 1,
-        }}
-      >
-        <TextInput
-          value="Please select"
-          style={{ fontFamily: "OpenSans_400Regular", fontSize: 16 }}
-        />
-      </View>
+      <Dropdown placeholder={"Please select"} />
       <View style={{ marginTop: 20 }} />
       <Title title={"How much do you want to borrow?"} />
       <View
