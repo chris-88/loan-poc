@@ -1,50 +1,56 @@
 import { View, Text } from "react-native";
 
-export default function Selector() {
+export default function Selector({ titles }) {
   return (
-    <View style={{ flexDirection: "row" }}>
-      <View
-        style={{
-          backgroundColor: "#000066",
-          width: 170,
-          height: 47,
-          marginTop: 9,
-          marginRight: 18,
-          paddingVertical: 12,
-        }}
-      >
-        <Text
+    <View
+      style={{
+        flexDirection: "row",
+        paddingVertical: 12,
+        justifyContent: "space-between",
+      }}
+    >
+      {titles.map((item) => (
+        <View
           style={{
-            fontFamily: "OpenSans_600SemiBold",
-            fontSize: 16,
-            color: "white",
-            alignSelf: "center",
+            flex: 1,
+            backgroundColor: "#000066",
+            padding: 12,
           }}
         >
-          New loan
-        </Text>
-      </View>
-      <View
-        style={{
-          borderColor: "#dcdcdc",
-          borderWidth: 1,
-          width: 170,
-          height: 47,
-          marginTop: 9,
-          paddingVertical: 12,
-        }}
-      >
-        <Text
-          style={{
-            fontFamily: "OpenSans_600SemiBold",
-            fontSize: 16,
-            color: "black",
-            alignSelf: "center",
-          }}
-        >
-          Top up loan
-        </Text>
-      </View>
+          <Text
+            style={{
+              fontFamily: "OpenSans_600SemiBold",
+              fontSize: 16,
+              color: "white",
+              alignSelf: "center",
+            }}
+          >
+            {item}
+          </Text>
+        </View>
+      ))}
     </View>
   );
+}
+
+{
+  /* <View
+  style={{
+    flex: 1,
+    borderColor: "#dcdcdc",
+    borderWidth: 1,
+    padding: 12,
+  }}
+>
+  <Text
+    style={{
+      fontFamily: "OpenSans_600SemiBold",
+      fontSize: 16,
+      color: "black",
+      alignSelf: "center",
+    }}
+  >
+    Top up loan
+  </Text>
+</View> */
 }
