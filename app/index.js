@@ -2,6 +2,7 @@ import React from "react";
 import { ScrollView, StatusBar, View, useWindowDimensions } from "react-native";
 import LoanScreen1 from "../src/screens/loan/Screen_1";
 import LoanScreen2 from "../src/screens/loan/Screen_2";
+import LoanScreen3 from "../src/screens/loan/Screen_3";
 import { ProgressButton } from "../src/components";
 
 export default function Page() {
@@ -22,7 +23,7 @@ export default function Page() {
       <ScrollView horizontal pagingEnabled ref={ref}>
         <LoanScreen1 width={width} />
         <LoanScreen2 width={width} />
-        <LoanScreen1 width={width} />
+        <LoanScreen3 width={width} />
       </ScrollView>
       <ProgressButton pageBack={pageBack} pageForward={pageForward} />
     </View>
