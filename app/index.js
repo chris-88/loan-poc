@@ -1,31 +1,27 @@
-import React from "react";
-import { ScrollView, StatusBar, View, useWindowDimensions } from "react-native";
-import LoanScreen1 from "../src/screens/loan/Screen_1";
-import LoanScreen2 from "../src/screens/loan/Screen_2";
-import LoanScreen3 from "../src/screens/loan/Screen_3";
-import { ProgressButton } from "../src/components";
+import { View } from "react-native";
+import {
+  PageHeading,
+  ProgressButton,
+  TextBlock,
+  Title,
+} from "../src/components";
+import { useRouter } from "expo-router";
 
 export default function Page() {
-  const { width } = useWindowDimensions();
-  const ref = React.useRef(null);
-  const [index, setIndex] = React.useState(0);
-  const pageForward = () => (
-    ref.current?.scrollTo({ x: index + width, animated: true }),
-    setIndex(index + width)
-  );
-  const pageBack = () => (
-    ref.current?.scrollTo({ x: index - width, animated: true }),
-    setIndex(index - width)
-  );
+  const router = useRouter();
+  const onPress = () => {
+    router.push("/loan/page1");
+  };
   return (
-    <View style={{ backgroundColor: "white", flex: 1, width }}>
-      <StatusBar barStyle={"light-content"} />
-      <ScrollView horizontal pagingEnabled ref={ref}>
-        <LoanScreen1 width={width} />
-        <LoanScreen2 width={width} />
-        <LoanScreen3 width={width} />
-      </ScrollView>
-      <ProgressButton pageBack={pageBack} pageForward={pageForward} />
+    <View style={{ backgroundColor: "white", flex: 1, padding: 16 }}>
+      <PageHeading title={"Welcome to Bank of Ireland"} />
+      <Title title={"Introduction"} />
+      <TextBlock
+        text={
+          "This is a POC for the EDB Personal Loans journey. The objective is to prove the concept that DCOE can provide an in app journey, which utilises the B365 id to identify users, and provide them with immediate feedback on their loan request based on backend eligibility models."
+        }
+      />
+      <ProgressButton onPress={onPress} backEnable={false} />
     </View>
   );
 }

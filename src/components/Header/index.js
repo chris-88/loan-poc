@@ -1,4 +1,4 @@
-import { View, Image, useWindowDimensions, Text } from "react-native";
+import { View, Image, Text } from "react-native";
 
 export default function Header() {
   return (

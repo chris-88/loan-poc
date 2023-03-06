@@ -6,7 +6,7 @@ export default function TextBlock({ text }) {
       style={{
         fontFamily: "OpenSans_400Regular",
         fontSize: 16,
-        paddingBottom: 20,
+        paddingVertical: 20,
       }}
     >
       {text}

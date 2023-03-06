@@ -1,3 +1,4 @@
+import { StatusBar } from "react-native";
 import { SplashScreen, Stack } from "expo-router";
 import {
   useFonts,
@@ -20,6 +21,7 @@ export default function Layout() {
   return (
     <>
       <Header />
+      <StatusBar barStyle={"light-content"} />
       <Stack
         screenOptions={{
           headerShown: false,

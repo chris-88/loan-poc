@@ -1,6 +1,9 @@
 import { View, Text, TouchableOpacity } from "react-native";
+import { AntDesign } from "@expo/vector-icons";
+import { useRouter } from "expo-router";
 
-export default function ProgressButton({ pageBack, pageForward }) {
+export default function ProgressButton({ onPress, backEnable }) {
+  const router = useRouter();
   return (
     <View
       style={{
@@ -15,14 +18,17 @@ export default function ProgressButton({ pageBack, pageForward }) {
     >
       <TouchableOpacity
         style={{
-          width: "25%",
+          width: !backEnable ? "0%" : "25%",
           alignItems: "center",
-          borderWidth: 1,
-          borderColor: "#dcdcdc",
-          padding: 12,
+          padding: !backEnable ? 0 : 6,
+          flexDirection: "row",
+          justifyContent: "space-between",
         }}
-        onPress={pageBack}
+        onPress={() => {
+          router.back();
+        }}
       >
+        <AntDesign name="arrowleft" size={24} color="black" />
         <Text
           style={{
             color: "black",
@@ -35,14 +41,14 @@ export default function ProgressButton({ pageBack, pageForward }) {
       </TouchableOpacity>
       <TouchableOpacity
         style={{
-          width: "70%",
+          width: !backEnable ? "100%" : "70%",
           alignItems: "center",
           backgroundColor: "#000066",
           borderWidth: 1,
           borderColor: "#000066",
           padding: 12,
         }}
-        onPress={pageForward}
+        onPress={onPress}
       >
         <Text
           style={{
