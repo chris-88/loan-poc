@@ -11,7 +11,7 @@ export default function LoanPage4() {
   const [selected, setSelected] = useState(0);
   return (
     <View style={{ backgroundColor: "white", flex: 1 }}>
-      <View style={{ padding: 16 }}>
+      <View style={{ padding: 16, flex: 1 }}>
         <PageHeading title={"Your repayment options"} />
         <Title title={"Which repayment option might work best for you?"} />
         <View style={{ paddingVertical: 12 }}>

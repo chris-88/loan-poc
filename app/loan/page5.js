@@ -10,66 +10,68 @@ export default function LoanPage5() {
   };
   return (
     <View style={{ backgroundColor: "white", flex: 1 }}>
-      <View style={{ padding: 16 }}>
-        <PageHeading title={"Loan calculation"} />
-        <Title title={"Based on what you've told us:"} />
-      </View>
-      <View style={{ backgroundColor: "#efefef", padding: 20 }}>
-        <Title title={"Cost of credit"} />
-        <View
-          style={{
-            borderBottomWidth: 1,
-            borderBottomColor: "rgba(0, 0, 0, 0.2)",
-            marginBottom: 12,
-          }}
-        >
-          <Text
+      <View style={{ flex: 1 }}>
+        <View style={{ padding: 16 }}>
+          <PageHeading title={"Loan calculation"} />
+          <Title title={"Based on what you've told us:"} />
+        </View>
+        <View style={{ backgroundColor: "#efefef", padding: 20 }}>
+          <Title title={"Cost of credit"} />
+          <View
             style={{
-              fontFamily: "OpenSans_400Regular",
-              fontSize: 24,
-              paddingVertical: 12,
+              borderBottomWidth: 1,
+              borderBottomColor: "rgba(0, 0, 0, 0.2)",
+              marginBottom: 12,
             }}
           >
-            €270
-          </Text>
-        </View>
-        <Title title={"Total repayment amount"} />
-        <View
-          style={{
-            borderBottomWidth: 1,
-            borderBottomColor: "rgba(0, 0, 0, 0.2)",
-            marginBottom: 12,
-          }}
-        >
-          <Text
+            <Text
+              style={{
+                fontFamily: "OpenSans_400Regular",
+                fontSize: 24,
+                paddingVertical: 12,
+              }}
+            >
+              €270
+            </Text>
+          </View>
+          <Title title={"Total repayment amount"} />
+          <View
             style={{
-              fontFamily: "OpenSans_400Regular",
-              fontSize: 24,
-              paddingVertical: 12,
+              borderBottomWidth: 1,
+              borderBottomColor: "rgba(0, 0, 0, 0.2)",
+              marginBottom: 12,
             }}
           >
-            €6,270
-          </Text>
-        </View>
-        <Title title={"Variable Annual Percentage Rate"} />
-        <View
-          style={{
-            marginBottom: 20,
-          }}
-        >
-          <Text
+            <Text
+              style={{
+                fontFamily: "OpenSans_400Regular",
+                fontSize: 24,
+                paddingVertical: 12,
+              }}
+            >
+              €6,270
+            </Text>
+          </View>
+          <Title title={"Variable Annual Percentage Rate"} />
+          <View
             style={{
-              fontFamily: "OpenSans_400Regular",
-              fontSize: 24,
-              paddingVertical: 12,
+              marginBottom: 20,
             }}
           >
-            8.50%
+            <Text
+              style={{
+                fontFamily: "OpenSans_400Regular",
+                fontSize: 24,
+                paddingVertical: 12,
+              }}
+            >
+              8.50%
+            </Text>
+          </View>
+          <Text style={{ fontFamily: "OpenSans_400Regular", opacity: 0.6 }}>
+            This calculation is a guideline only and in not a loan offer.
           </Text>
         </View>
-        <Text style={{ fontFamily: "OpenSans_400Regular", opacity: 0.6 }}>
-          This calculation is a guideline only and in not a loan offer.
-        </Text>
       </View>
       <ProgressButton onPress={onPress} backEnable={true} enabled={true} />
     </View>

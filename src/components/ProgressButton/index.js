@@ -7,9 +7,9 @@ export default function ProgressButton({ onPress, backEnable, enabled }) {
   return (
     <View
       style={{
-        position: "absolute",
         alignItems: "center",
         bottom: 40,
+        paddingTop: 20,
         flexDirection: "row",
         justifyContent: "space-between",
         alignSelf: "center",

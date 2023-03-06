@@ -7,6 +7,7 @@ import ToggleButton from "./ToggleButton";
 import TextBlock from "./TextBlock";
 import Dropdown from "./Dropdown";
 import EuroInput from "./EuroInput";
+import SubTitle from "./SubTitle";
 
 export {
   Header,
@@ -18,4 +19,5 @@ export {
   TextBlock,
   Dropdown,
   EuroInput,
+  SubTitle,
 };

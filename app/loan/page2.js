@@ -26,7 +26,7 @@ export default function LoanPage2() {
   };
   return (
     <View style={{ backgroundColor: "white", flex: 1 }}>
-      <View style={{ padding: 16 }}>
+      <View style={{ padding: 16, flex: 1 }}>
         <PageHeading title={"Get a quick quote"} />
         <TextBlock
           text={
@@ -34,7 +34,7 @@ export default function LoanPage2() {
           }
         />
         <Title title={"What is the purpose of your loan?"} />
-        <Dropdown placeholder={"Please select"} items={Items} />
+        <Dropdown placeholder={"Please select"} items={Items} zIndex={1} />
         <View style={{ marginTop: 20 }} />
         <Title title={"How much do you want to borrow?"} />
         <EuroInput />

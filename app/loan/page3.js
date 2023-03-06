@@ -16,7 +16,7 @@ export default function LoanPage3() {
 
   return (
     <View style={{ backgroundColor: "white", flex: 1 }}>
-      <View style={{ padding: 16 }}>
+      <View style={{ padding: 16, flex: 1 }}>
         <PageHeading title={"Your repayment options"} />
         <Title title={"How often do you want to make repayments?"} />
         <ToggleButton option1={"Monthly"} option2={"Weekly"} />

@@ -5,7 +5,7 @@ import {
   Title,
   TextBlock,
   Dropdown,
-  EuroInput,
+  SubTitle,
 } from "../../src/components";
 import { useRouter } from "expo-router";
 
@@ -42,7 +42,7 @@ export default function LoanPage6() {
   };
   return (
     <View style={{ backgroundColor: "white", flex: 1 }}>
-      <View style={{ padding: 16 }}>
+      <View style={{ padding: 16, flex: 1 }}>
         <PageHeading title={"Tell us about yourself"} />
         <Title title={"Marital Status"} />
         <Dropdown
@@ -59,13 +59,16 @@ export default function LoanPage6() {
         />
         <View style={{ paddingBottom: 20 }} />
         <Title title={"Number of dependants"} />
+        <SubTitle
+          text={"Dependants are people that you support financially."}
+        />
         <Dropdown
           placeholder={"Please select"}
           items={DependItems}
           zIndex={1}
         />
       </View>
-      <ProgressButton backEnable={true} enabled={true} />
+      <ProgressButton onPress={onPress} backEnable={true} enabled={true} />
     </View>
   );
 }
