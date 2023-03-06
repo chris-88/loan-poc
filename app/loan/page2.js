@@ -39,7 +39,7 @@ export default function LoanPage2() {
         <Title title={"How much do you want to borrow?"} />
         <EuroInput />
       </View>
-      <ProgressButton onPress={onPress} backEnable={true} />
+      <ProgressButton onPress={onPress} backEnable={true} enabled={true} />
     </View>
   );
 }

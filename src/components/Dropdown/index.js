@@ -4,19 +4,21 @@ import {
   TouchableOpacity,
   FlatList,
   Text,
+  Pressable,
 } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import { useState } from "react";
 
-export default function Dropdown({ placeholder, items }) {
+export default function Dropdown({ placeholder, items, zIndex }) {
   const [pressed, setPressed] = useState(false);
   const onPress = () => {
     setPressed((previousState) => !previousState);
   };
   const [selected, setSelected] = useState("");
   return (
-    <View style={{ zIndex: 1 }}>
-      <View
+    <View style={{ zIndex }}>
+      <Pressable
+        onPress={onPress}
         style={{
           marginTop: 12,
           padding: 12,
@@ -33,10 +35,8 @@ export default function Dropdown({ placeholder, items }) {
           placeholderTextColor="#cccccc"
           style={{ fontFamily: "OpenSans_400Regular", fontSize: 16 }}
         />
-        <TouchableOpacity onPress={onPress}>
-          <AntDesign name="down" size={16} color="#cccccc" />
-        </TouchableOpacity>
-      </View>
+        <AntDesign name="down" size={16} color="#cccccc" />
+      </Pressable>
       <View
         style={{
           marginTop: 5,

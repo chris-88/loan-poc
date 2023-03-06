@@ -22,7 +22,6 @@ export default function LoanPage3() {
         <ToggleButton option1={"Monthly"} option2={"Weekly"} />
         <View style={{ height: 25 }} />
         <Title title={"Do you need to defer any payments?"} />
-        <View style={{ height: 12 }} />
         <TextBlock
           text={
             "Deferring payments would mean paying more interest over your loan term."
@@ -30,7 +29,7 @@ export default function LoanPage3() {
         />
         <ToggleButton option1={"Yes"} option2={"No"} />
       </View>
-      <ProgressButton onPress={onPress} backEnable={true} />
+      <ProgressButton onPress={onPress} backEnable={true} enabled={true} />
     </View>
   );
 }

@@ -2,6 +2,7 @@ import { View } from "react-native";
 import { ProgressButton } from "../../src/components";
 import { PageHeading, Title, ToggleButton } from "../../src/components";
 import { useRouter } from "expo-router";
+import { useRef, useState } from "react";
 
 export default function LoanPage1() {
   const router = useRouter();
@@ -15,7 +16,7 @@ export default function LoanPage1() {
         <Title title={"Choose a loan"} />
         <ToggleButton option1={"New loan"} option2={"Top up loan"} />
       </View>
-      <ProgressButton onPress={onPress} backEnable={true} />
+      <ProgressButton onPress={onPress} backEnable={true} enabled={true} />
     </View>
   );
 }

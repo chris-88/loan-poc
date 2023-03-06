@@ -19,6 +19,7 @@ export default function ToggleButton({ option1, option2 }) {
         }}
         onPress={() => {
           setOpt1((previousState) => !previousState), setOpt2(false);
+          refEnabled = true;
         }}
       >
         <Text
@@ -44,6 +45,7 @@ export default function ToggleButton({ option1, option2 }) {
         }}
         onPress={() => {
           setOpt2((previousState) => !previousState), setOpt1(false);
+          refEnabled = true;
         }}
       >
         <Text
