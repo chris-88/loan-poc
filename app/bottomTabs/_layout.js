@@ -7,10 +7,9 @@ export default function Layout() {
     <>
       <StatusBar hidden={false} />
       <Tabs
-        initialRouteName="apply"
         screenOptions={{
-          tabBarActiveTintColor: "blue",
-          // headerTitleContainerStyle: { fontFamily: "OpenSans_600SemiBold" },
+          tabBarActiveTintColor: "#0000cc",
+          headerTintColor: "#0000cc",
         }}
       >
         <Tabs.Screen
@@ -27,7 +26,7 @@ export default function Layout() {
               <AntDesign
                 name="home"
                 size={24}
-                color={focused ? "blue" : "gray"}
+                color={focused ? "#0000cc" : "gray"}
               />
             ),
           }}
@@ -40,7 +39,7 @@ export default function Layout() {
               <AntDesign
                 name="form"
                 size={24}
-                color={focused ? "blue" : "gray"}
+                color={focused ? "#0000cc" : "gray"}
               />
             ),
           }}
@@ -53,7 +52,7 @@ export default function Layout() {
               <AntDesign
                 name="profile"
                 size={24}
-                color={focused ? "blue" : "gray"}
+                color={focused ? "#0000cc" : "gray"}
               />
             ),
           }}
@@ -66,7 +65,7 @@ export default function Layout() {
               <AntDesign
                 name="user"
                 size={24}
-                color={focused ? "blue" : "gray"}
+                color={focused ? "#0000cc" : "gray"}
               />
             ),
           }}
