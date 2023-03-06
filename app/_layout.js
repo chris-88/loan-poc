@@ -7,8 +7,6 @@ import {
   OpenSans_700Bold,
 } from "@expo-google-fonts/open-sans";
 
-import Header from "../src/components/Header";
-
 export default function Layout() {
   const [fontsLoaded] = useFonts({
     OpenSans_400Regular,
@@ -20,8 +18,7 @@ export default function Layout() {
   }
   return (
     <>
-      <Header />
-      <StatusBar barStyle={"light-content"} />
+      <StatusBar hidden={true} />
       <Stack
         screenOptions={{
           headerShown: false,

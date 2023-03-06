@@ -1,36 +1,63 @@
-import { View } from "react-native";
-import {
-  PageHeading,
-  ProgressButton,
-  TextBlock,
-  Title,
-} from "../src/components";
+import { Text, TouchableOpacity, View } from "react-native";
 import { useRouter } from "expo-router";
 
 export default function Page() {
   const router = useRouter();
   const onPress = () => {
-    router.push("/loan/page1");
+    router.push("/bottomTabs/home");
   };
   return (
-    <View style={{ backgroundColor: "white", flex: 1 }}>
-      <View style={{ flex: 1, padding: 16 }}>
-        <PageHeading title={"Welcome to Bank of Ireland"} />
-        <Title title={"Introduction"} />
-        <TextBlock text={"This is a POC for the EDB Personal Loans journey."} />
-        <TextBlock
-          text={
-            "The objective is to prove the concept that DCOE can provide an in app journey, which utilises the B365 id to identify users, and provide them with immediate feedback on their loan request based on backend eligibility models."
-          }
-        />
+    <View style={{ backgroundColor: "#0000cc", flex: 1 }}>
+      <View
+        style={{
+          flex: 1,
+          padding: 16,
+          justifyContent: "center",
+        }}
+      >
+        <Text
+          style={{
+            fontFamily: "OpenSans_700Bold",
+            fontSize: 42,
+            color: "white",
+          }}
+        >
+          Welcome to Bank of Ireland
+        </Text>
+        <Text
+          style={{
+            paddingTop: 40,
+            fontFamily: "OpenSans_400Regular",
+            fontSize: 20,
+            color: "white",
+          }}
+        >
+          This is a POC mobile app developed by the Digital COE using Expo and
+          React Native
+        </Text>
       </View>
-      <ProgressButton
+      <TouchableOpacity
         onPress={onPress}
-        backEnable={false}
-        enabled={true}
-        title={"Next"}
-        style={"SECONDARY"}
-      />
+        style={{
+          margin: 16,
+          marginBottom: 30,
+          padding: 16,
+          backgroundColor: "#00ffc5",
+          alignItems: "center",
+          justifyContent: "center",
+          borderRadius: 9,
+        }}
+      >
+        <Text
+          style={{
+            fontFamily: "OpenSans_700Bold",
+            fontSize: 20,
+            color: "#0000cc",
+          }}
+        >
+          Let's go!
+        </Text>
+      </TouchableOpacity>
     </View>
   );
 }

@@ -30,10 +30,11 @@ export default function Header() {
           alignSelf: "center",
           bottom: "0%",
           resizeMode: "contain",
+          zIndex: 1,
         }}
         source={require("../../assets/images/headerLogo.png")}
       />
-      <View style={{ height: 12 }} />
+      <View style={{ height: 12, backgroundColor: "white" }} />
     </View>
   );
 }
