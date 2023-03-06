@@ -9,8 +9,8 @@ export default function Layout() {
       <Tabs
         initialRouteName="apply"
         screenOptions={{
-          // headerShown: false,
           tabBarActiveTintColor: "blue",
+          // headerTitleContainerStyle: { fontFamily: "OpenSans_600SemiBold" },
         }}
       >
         <Tabs.Screen
@@ -35,6 +35,7 @@ export default function Layout() {
         <Tabs.Screen
           name="apply"
           options={{
+            headerTitle: "Apply",
             tabBarIcon: ({ focused }) => (
               <AntDesign
                 name="form"
@@ -42,12 +43,12 @@ export default function Layout() {
                 color={focused ? "blue" : "gray"}
               />
             ),
-            // headerShown: false,
           }}
         />
         <Tabs.Screen
           name="services"
           options={{
+            headerTitle: "Services",
             tabBarIcon: ({ focused }) => (
               <AntDesign
                 name="profile"
@@ -60,6 +61,7 @@ export default function Layout() {
         <Tabs.Screen
           name="profile"
           options={{
+            headerTitle: "Profile",
             tabBarIcon: ({ focused }) => (
               <AntDesign
                 name="user"

@@ -9,7 +9,7 @@ const ListItem = ({ title, onPress }) => {
         alignItems: "center",
         justifyContent: "center",
         padding: 8,
-        backgroundColor: "blue",
+        backgroundColor: "white",
         borderRadius: 24,
         margin: 16,
         height: 150,
@@ -20,7 +20,7 @@ const ListItem = ({ title, onPress }) => {
         style={{
           fontFamily: "OpenSans_600SemiBold",
           fontSize: 22,
-          color: "white",
+          color: "black",
           textAlign: "center",
         }}
       >
@@ -36,7 +36,7 @@ export default function apply() {
     <ScrollView
       style={{
         flex: 1,
-        backgroundColor: "white",
+        // backgroundColor: "white",
         padding: 16,
       }}
       contentContainerStyle={{ alignItems: "center" }}
