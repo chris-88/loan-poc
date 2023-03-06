@@ -35,11 +35,15 @@ export default function LoanPage2() {
         />
         <Title title={"What is the purpose of your loan?"} />
         <Dropdown placeholder={"Please select"} items={Items} zIndex={1} />
-        <View style={{ marginTop: 20 }} />
         <Title title={"How much do you want to borrow?"} />
         <EuroInput />
       </View>
-      <ProgressButton onPress={onPress} backEnable={true} enabled={true} />
+      <ProgressButton
+        onPress={onPress}
+        backEnable={true}
+        enabled={true}
+        title={"Next"}
+      />
     </View>
   );
 }

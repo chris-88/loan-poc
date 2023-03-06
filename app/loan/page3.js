@@ -20,7 +20,6 @@ export default function LoanPage3() {
         <PageHeading title={"Your repayment options"} />
         <Title title={"How often do you want to make repayments?"} />
         <ToggleButton option1={"Monthly"} option2={"Weekly"} />
-        <View style={{ height: 25 }} />
         <Title title={"Do you need to defer any payments?"} />
         <TextBlock
           text={
@@ -29,7 +28,12 @@ export default function LoanPage3() {
         />
         <ToggleButton option1={"Yes"} option2={"No"} />
       </View>
-      <ProgressButton onPress={onPress} backEnable={true} enabled={true} />
+      <ProgressButton
+        onPress={onPress}
+        backEnable={true}
+        enabled={true}
+        title={"Next"}
+      />
     </View>
   );
 }

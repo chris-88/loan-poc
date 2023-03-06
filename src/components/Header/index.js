@@ -1,4 +1,4 @@
-import { View, Image, Text } from "react-native";
+import { View, Image, Text, TouchableOpacity, Alert } from "react-native";
 
 export default function Header() {
   return (
@@ -11,16 +11,18 @@ export default function Header() {
           justifyContent: "center",
         }}
       >
-        <Text
-          style={{
-            alignSelf: "flex-end",
-            marginRight: 18,
-            fontFamily: "OpenSans_600SemiBold",
-            fontSize: 16,
-          }}
-        >
-          Need help?
-        </Text>
+        <TouchableOpacity onPress={() => Alert.alert("Need help?")}>
+          <Text
+            style={{
+              alignSelf: "flex-end",
+              marginRight: 18,
+              fontFamily: "OpenSans_600SemiBold",
+              fontSize: 16,
+            }}
+          >
+            Need help?
+          </Text>
+        </TouchableOpacity>
       </View>
       <Image
         style={{

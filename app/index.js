@@ -13,8 +13,8 @@ export default function Page() {
     router.push("/loan/page1");
   };
   return (
-    <View style={{ backgroundColor: "white", flex: 1, padding: 16 }}>
-      <View style={{ flex: 1 }}>
+    <View style={{ backgroundColor: "white", flex: 1 }}>
+      <View style={{ flex: 1, padding: 16 }}>
         <PageHeading title={"Welcome to Bank of Ireland"} />
         <Title title={"Introduction"} />
         <TextBlock text={"This is a POC for the EDB Personal Loans journey."} />
@@ -24,7 +24,13 @@ export default function Page() {
           }
         />
       </View>
-      <ProgressButton onPress={onPress} backEnable={false} enabled={true} />
+      <ProgressButton
+        onPress={onPress}
+        backEnable={false}
+        enabled={true}
+        title={"Next"}
+        style={"SECONDARY"}
+      />
     </View>
   );
 }

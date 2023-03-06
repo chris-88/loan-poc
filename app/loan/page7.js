@@ -41,33 +41,35 @@ export default function LoanPage7() {
     router.push("/loan/page8");
   };
   return (
-    <ScrollView style={{ backgroundColor: "white", flex: 1 }}>
+    <ScrollView
+      showsVerticalScrollIndicator={false}
+      style={{ backgroundColor: "white", flex: 1 }}
+    >
       <View style={{ padding: 16, flex: 1 }}>
         <PageHeading title={"Tell us about your finances"} />
         <Title title={"Net monthly salary"} />
         <EuroInput />
-        <View style={{ paddingBottom: 20 }} />
         <Title title={"Partner's net monthly salary"} />
         <EuroInput />
-        <View style={{ paddingBottom: 20 }} />
         <Title title={"Monthly mortgage payments"} />
         <EuroInput />
-        <View style={{ paddingBottom: 20 }} />
         <Title title={"Total credit card balance (if applicable)"} />
         <EuroInput />
-        <View style={{ paddingBottom: 20 }} />
         <Title title={"Other monthly loan repayments (if applicable)"} />
         <EuroInput />
-        <View style={{ paddingBottom: 20 }} />
         <Title
           title={
             "Other monthly loan repayments made jointly with your partner (if applicable)"
           }
         />
         <EuroInput />
-        <View style={{ paddingBottom: 20 }} />
       </View>
-      <ProgressButton backEnable={true} enabled={true} />
+      <ProgressButton
+        onPress={onPress}
+        backEnable={true}
+        enabled={true}
+        title={"Next"}
+      />
     </ScrollView>
   );
 }

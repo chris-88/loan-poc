@@ -26,7 +26,8 @@ export default function EuroInput() {
       <TextInput
         placeholder="Please enter"
         placeholderTextColor={"#ccc"}
-        keyboardType="number-pad"
+        keyboardType="numbers-and-punctuation"
+        // keyboardType="number-pad"
         style={{ fontFamily: "OpenSans_400Regular", fontSize: 16 }}
       />
     </View>

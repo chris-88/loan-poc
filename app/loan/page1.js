@@ -16,7 +16,12 @@ export default function LoanPage1() {
         <Title title={"Choose a loan"} />
         <ToggleButton option1={"New loan"} option2={"Top up loan"} />
       </View>
-      <ProgressButton onPress={onPress} backEnable={true} enabled={true} />
+      <ProgressButton
+        onPress={onPress}
+        backEnable={true}
+        enabled={true}
+        title={"Next"}
+      />
     </View>
   );
 }

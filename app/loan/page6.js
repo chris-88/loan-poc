@@ -50,14 +50,12 @@ export default function LoanPage6() {
           items={MaritalItems}
           zIndex={3}
         />
-        <View style={{ paddingBottom: 20 }} />
         <Title title={"Living Arrangements"} />
         <Dropdown
           placeholder={"Please select"}
           items={LivingItems}
           zIndex={2}
         />
-        <View style={{ paddingBottom: 20 }} />
         <Title title={"Number of dependants"} />
         <SubTitle
           text={"Dependants are people that you support financially."}
@@ -68,7 +66,12 @@ export default function LoanPage6() {
           zIndex={1}
         />
       </View>
-      <ProgressButton onPress={onPress} backEnable={true} enabled={true} />
+      <ProgressButton
+        onPress={onPress}
+        backEnable={true}
+        enabled={true}
+        title={"Next"}
+      />
     </View>
   );
 }

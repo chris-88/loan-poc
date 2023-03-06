@@ -73,7 +73,12 @@ export default function LoanPage5() {
           </Text>
         </View>
       </View>
-      <ProgressButton onPress={onPress} backEnable={true} enabled={true} />
+      <ProgressButton
+        onPress={onPress}
+        backEnable={true}
+        enabled={true}
+        title={"Next"}
+      />
     </View>
   );
 }

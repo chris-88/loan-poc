@@ -2,14 +2,20 @@ import { View, Text, TouchableOpacity, Alert } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 
-export default function ProgressButton({ onPress, backEnable, enabled }) {
+export default function ProgressButton({
+  onPress,
+  backEnable,
+  enabled,
+  title,
+  style,
+}) {
   const router = useRouter();
   return (
     <View
       style={{
         alignItems: "center",
         bottom: 40,
-        paddingTop: 20,
+        paddingTop: 40,
         flexDirection: "row",
         justifyContent: "space-between",
         alignSelf: "center",
@@ -43,7 +49,11 @@ export default function ProgressButton({ onPress, backEnable, enabled }) {
         style={{
           width: !backEnable ? "100%" : "70%",
           alignItems: "center",
-          backgroundColor: !enabled ? "white" : "#000066",
+          backgroundColor: !enabled
+            ? "white"
+            : style == "SECONDARY"
+            ? "#0000ff"
+            : "#000066",
           borderWidth: !enabled ? 1 : 0,
           borderColor: "#ccc",
           padding: 12,
@@ -57,7 +67,7 @@ export default function ProgressButton({ onPress, backEnable, enabled }) {
             fontSize: 16,
           }}
         >
-          Next
+          {title}
         </Text>
       </TouchableOpacity>
     </View>

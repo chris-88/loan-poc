@@ -92,7 +92,12 @@ export default function LoanPage4() {
           </TouchableOpacity>
         </View>
       </View>
-      <ProgressButton onPress={onPress} backEnable={true} enabled={true} />
+      <ProgressButton
+        onPress={onPress}
+        backEnable={true}
+        enabled={true}
+        title={"Next"}
+      />
     </View>
   );
 }
