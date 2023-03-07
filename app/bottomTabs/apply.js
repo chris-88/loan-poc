@@ -48,7 +48,7 @@ export default function apply() {
       <Item
         name={"Current account"}
         img={require("../../src/assets/icons/current-accounts-icon.png")}
-        route={() => router.push("/loan/")}
+        route={() => router.push("/products/CurrentAccount")}
       />
       <Item
         name={"Personal loan"}
@@ -58,12 +58,12 @@ export default function apply() {
       <Item
         name={"Mortgage"}
         img={require("../../src/assets/icons/mortgages-icon.png")}
-        route={() => router.push("/loan/")}
+        route={() => router.push("/products/Mortgages")}
       />
       <Item
         name={"Credit card"}
         img={require("../../src/assets/icons/credit-cards-icon.png")}
-        route={() => router.push("/loan/")}
+        route={() => router.push("/products/CreditCards")}
       />
     </View>
   );

@@ -1,6 +1,8 @@
+import { useRouter } from "expo-router";
 import { View, Image, Text, TouchableOpacity, Alert } from "react-native";
 
 export default function Header() {
+  const router = useRouter();
   return (
     <View>
       <View style={{ height: 47, backgroundColor: "#000066" }} />
@@ -11,7 +13,7 @@ export default function Header() {
           justifyContent: "center",
         }}
       >
-        <TouchableOpacity onPress={() => Alert.alert("Need help?")}>
+        <TouchableOpacity onPress={() => router.push("/NeedHelp/")}>
           <Text
             style={{
               alignSelf: "flex-end",

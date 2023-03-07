@@ -6,7 +6,7 @@ import Header from "../../src/components/Header";
 export default function Layout() {
   return (
     <>
-      <StatusBar hidden={false} />
+      <StatusBar hidden={false} barStyle={"light-content"} />
       <Header />
       <Tabs
         screenOptions={{

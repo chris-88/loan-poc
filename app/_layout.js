@@ -23,7 +23,9 @@ export default function Layout() {
         screenOptions={{
           headerShown: false,
         }}
-      />
+      >
+        <Stack.Screen name="NeedHelp" options={{ presentation: "modal" }} />
+      </Stack>
     </>
   );
 }

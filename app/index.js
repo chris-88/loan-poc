@@ -45,13 +45,12 @@ export default function Page() {
           backgroundColor: "#00ffc5",
           alignItems: "center",
           justifyContent: "center",
-          borderRadius: 9,
         }}
       >
         <Text
           style={{
             fontFamily: "OpenSans_700Bold",
-            fontSize: 20,
+            fontSize: 18,
             color: "#0000cc",
           }}
         >

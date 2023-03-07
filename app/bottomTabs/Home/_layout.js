@@ -4,7 +4,7 @@ import payments from "./payments";
 import cards from "./cards";
 import { Animated, View, TouchableOpacity } from "react-native";
 
-const TabBar = ({ state, descriptors, navigation, position }) => {
+function TabBar({ state, descriptors, navigation }) {
   return (
     <View style={{ flexDirection: "row" }}>
       {state.routes.map((route, index) => {
@@ -30,13 +30,6 @@ const TabBar = ({ state, descriptors, navigation, position }) => {
           }
         };
 
-        const onLongPress = () => {
-          navigation.emit({
-            type: "tabLongPress",
-            target: route.key,
-          });
-        };
-
         return (
           <TouchableOpacity
             accessibilityRole="button"
@@ -44,7 +37,6 @@ const TabBar = ({ state, descriptors, navigation, position }) => {
             accessibilityLabel={options.tabBarAccessibilityLabel}
             testID={options.tabBarTestID}
             onPress={onPress}
-            onLongPress={onLongPress}
             style={{
               flex: 1,
               backgroundColor: isFocused ? "#00ffc5" : "white",
@@ -70,7 +62,7 @@ const TabBar = ({ state, descriptors, navigation, position }) => {
       })}
     </View>
   );
-};
+}
 
 const Tab = createMaterialTopTabNavigator();
 
