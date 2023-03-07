@@ -1,19 +1,22 @@
 import { StatusBar } from "react-native";
 import { Tabs } from "expo-router";
 import { AntDesign } from "@expo/vector-icons";
+import Header from "../../src/components/Header";
 
 export default function Layout() {
   return (
     <>
       <StatusBar hidden={false} />
+      <Header />
       <Tabs
         screenOptions={{
           tabBarActiveTintColor: "#0000cc",
           headerTintColor: "#0000cc",
+          headerShown: false,
         }}
       >
         <Tabs.Screen
-          name="home"
+          name="Home"
           options={{
             headerStyle: {
               borderBottomColor: "transparent",
@@ -32,7 +35,7 @@ export default function Layout() {
           }}
         />
         <Tabs.Screen
-          name="apply"
+          name="Apply"
           options={{
             headerTitle: "Apply",
             tabBarIcon: ({ focused }) => (
@@ -45,7 +48,7 @@ export default function Layout() {
           }}
         />
         <Tabs.Screen
-          name="services"
+          name="Services"
           options={{
             headerTitle: "Services",
             tabBarIcon: ({ focused }) => (
@@ -58,7 +61,7 @@ export default function Layout() {
           }}
         />
         <Tabs.Screen
-          name="profile"
+          name="Profile"
           options={{
             headerTitle: "Profile",
             tabBarIcon: ({ focused }) => (

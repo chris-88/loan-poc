@@ -1,28 +1,36 @@
-import { View, Text, TouchableOpacity, ScrollView } from "react-native";
+import { View, Text, TouchableOpacity, Image } from "react-native";
 import { useRouter } from "expo-router";
 
-const ListItem = ({ title, onPress }) => {
+const Item = ({ name, img, route }) => {
   return (
     <TouchableOpacity
-      onPress={onPress}
+      onPress={route}
       style={{
         alignItems: "center",
-        justifyContent: "center",
         padding: 16,
-        backgroundColor: "#0000cc",
-        borderRadius: 24,
-        margin: 16,
+        backgroundColor: "white",
+        marginBottom: 16,
+        flexDirection: "row",
       }}
     >
+      <Image
+        source={img}
+        style={{
+          height: 80,
+          width: 80,
+          resizeMode: "contain",
+          marginRight: 16,
+        }}
+      />
       <Text
         style={{
           fontFamily: "OpenSans_600SemiBold",
           fontSize: 18,
-          color: "white",
+          color: "black",
           textAlign: "center",
         }}
       >
-        {title}
+        {name}
       </Text>
     </TouchableOpacity>
   );
@@ -34,24 +42,29 @@ export default function apply() {
     <View
       style={{
         flex: 1,
-        margin: 16,
         padding: 16,
-        backgroundColor: "#00ffc5",
-        // alignItems: "center",
-        // justifyContent: "center",
-        borderRadius: 18,
       }}
     >
-      <ListItem
-        title={"Current account"}
-        onPress={() => router.push("/loan/")}
+      <Item
+        name={"Current account"}
+        img={require("../../src/assets/icons/current-accounts-icon.png")}
+        route={() => router.push("/loan/")}
       />
-      <ListItem
-        title={"Savings account"}
-        onPress={() => router.push("/loan/")}
+      <Item
+        name={"Personal loan"}
+        img={require("../../src/assets/icons/loans-icon.png")}
+        route={() => router.push("/loan/")}
       />
-      <ListItem title={"Personal loan"} onPress={() => router.push("/loan/")} />
-      <ListItem title={"Mortgage"} onPress={() => router.push("/loan/")} />
+      <Item
+        name={"Mortgage"}
+        img={require("../../src/assets/icons/mortgages-icon.png")}
+        route={() => router.push("/loan/")}
+      />
+      <Item
+        name={"Credit card"}
+        img={require("../../src/assets/icons/credit-cards-icon.png")}
+        route={() => router.push("/loan/")}
+      />
     </View>
   );
 }
