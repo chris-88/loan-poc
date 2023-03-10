@@ -15,14 +15,14 @@ export default function Cards() {
         style={styles.card}
       />
       <TouchableOpacity style={styles.button}>
-        <Ionicons name="snow-outline" size={24} color="black" />
+        <Ionicons name="snow-outline" size={24} color="#0000CC" />
         <Text style={styles.text}>Freeze card</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
         <MaterialCommunityIcons
           name="credit-card-off-outline"
           size={24}
-          color="black"
+          color="#0000CC"
         />
         <Text style={styles.text}>Report lost or stolen</Text>
       </TouchableOpacity>
@@ -30,16 +30,16 @@ export default function Cards() {
         <MaterialCommunityIcons
           name="credit-card-refresh-outline"
           size={24}
-          color="black"
+          color="#0000CC"
         />
         <Text style={styles.text}>Replace damaged card</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
-        <Ionicons name="ios-key-outline" size={24} color="black" />
+        <Ionicons name="ios-key-outline" size={24} color="#0000CC" />
         <Text style={styles.text}>View card PIN</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
-        <FontAwesome5 name="apple-pay" size={24} color="black" />
+        <FontAwesome5 name="apple-pay" size={24} color="#0000CC" />
         <Text style={styles.text}>Set up apple pay</Text>
       </TouchableOpacity>
     </View>
