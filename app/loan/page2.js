@@ -1,4 +1,4 @@
-import { View } from "react-native";
+import { KeyboardAvoidingView, View } from "react-native";
 import { ProgressButton } from "../../src/components";
 import {
   PageHeading,
@@ -25,7 +25,7 @@ export default function LoanPage2() {
     router.push("/loan/page3");
   };
   return (
-    <View style={{ backgroundColor: "white", flex: 1 }}>
+    <KeyboardAvoidingView style={{ backgroundColor: "white", flex: 1 }}>
       <View style={{ padding: 16, flex: 1 }}>
         <PageHeading title={"Get a quick quote"} />
         <TextBlock
@@ -44,6 +44,6 @@ export default function LoanPage2() {
         enabled={true}
         title={"Next"}
       />
-    </View>
+    </KeyboardAvoidingView>
   );
 }

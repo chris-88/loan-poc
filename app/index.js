@@ -4,7 +4,7 @@ import { useRouter } from "expo-router";
 export default function Page() {
   const router = useRouter();
   const onPress = () => {
-    router.push("/bottomTabs/Home");
+    router.push("/main/");
   };
   return (
     <View style={{ backgroundColor: "#0000cc", flex: 1 }}>

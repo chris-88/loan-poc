@@ -8,6 +8,7 @@ import TextBlock from "./TextBlock";
 import Dropdown from "./Dropdown";
 import EuroInput from "./EuroInput";
 import SubTitle from "./SubTitle";
+import SignButton from "./SignButton";
 
 export {
   Header,
@@ -20,4 +21,5 @@ export {
   Dropdown,
   EuroInput,
   SubTitle,
+  SignButton,
 };
