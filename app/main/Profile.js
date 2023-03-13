@@ -1,22 +1,9 @@
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  StyleSheet,
-  Image,
-  useWindowDimensions,
-} from "react-native";
-import { useRouter } from "expo-router";
-import {
-  Ionicons,
-  MaterialCommunityIcons,
-  FontAwesome5,
-  AntDesign,
-} from "@expo/vector-icons";
+import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { MaterialCommunityIcons, AntDesign } from "@expo/vector-icons";
+import { useAuth } from "../../src/context/auth";
 
 export default function profile() {
-  const router = useRouter();
-  const { width } = useWindowDimensions();
+  const { signOut } = useAuth();
   return (
     <View style={styles.root}>
       <View
@@ -62,6 +49,7 @@ export default function profile() {
         <Text style={styles.text}>Security and Legal</Text>
       </TouchableOpacity>
       <TouchableOpacity
+        onPress={() => signOut()}
         style={{
           alignItems: "center",
           padding: 12,
