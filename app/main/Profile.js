@@ -28,7 +28,7 @@ export default function profile() {
       >
         <View
           style={{
-            backgroundColor: "rgba(0,0,0,0.2)",
+            backgroundColor: "#efefef",
             padding: 24,
             borderRadius: 100,
           }}
@@ -113,11 +113,12 @@ const styles = StyleSheet.create({
   root: {
     flex: 1,
     padding: 16,
+    backgroundColor: "white",
   },
   button: {
     alignItems: "center",
     padding: 12,
-    backgroundColor: "white",
+    backgroundColor: "#efefef",
     marginBottom: 8,
     flexDirection: "row",
     borderRadius: 6,

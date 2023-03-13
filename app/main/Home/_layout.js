@@ -7,7 +7,7 @@ import cards from "./cards";
 
 function TabBar({ state, descriptors, navigation }) {
   return (
-    <View style={{ flexDirection: "row" }}>
+    <View style={{ flexDirection: "row", backgroundColor: "white" }}>
       {state.routes.map((route, index) => {
         const { options } = descriptors[route.key];
         const label =
@@ -39,13 +39,13 @@ function TabBar({ state, descriptors, navigation }) {
             onPress={onPress}
             style={{
               flex: 1,
-              backgroundColor: isFocused ? "#00ffc5" : "white",
+              backgroundColor: isFocused ? "#00ffc5" : "#efefef",
               padding: 6,
-              margin: 6,
+              marginHorizontal: 6,
               alignItems: "center",
               justifyContent: "center",
               borderRadius: 18,
-              marginTop: 16,
+              marginTop: 6,
             }}
           >
             <Animated.Text
@@ -69,7 +69,11 @@ const Tab = createMaterialTopTabNavigator();
 export default function MyTabs() {
   return (
     <Tab.Navigator tabBar={(props) => <TabBar {...props} />}>
-      <Tab.Screen name="Accounts" component={accounts} />
+      <Tab.Screen
+        name="Accounts"
+        component={accounts}
+        // options={{ backgroundColor: "white" }}
+      />
       <Tab.Screen name="Payments" component={payments} />
       <Tab.Screen name="Cards" component={cards} />
     </Tab.Navigator>

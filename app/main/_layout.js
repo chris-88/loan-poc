@@ -11,19 +11,12 @@ export default function Layout() {
       <Tabs
         screenOptions={{
           tabBarActiveTintColor: "#0000cc",
-          headerTintColor: "#0000cc",
           headerShown: false,
         }}
       >
         <Tabs.Screen
           name="Home"
           options={{
-            headerStyle: {
-              borderBottomColor: "transparent",
-              shadowColor: "transparent",
-              borderBottomWidth: 0,
-              elevation: 0,
-            },
             headerTitle: "Home",
             tabBarIcon: ({ focused }) => (
               <AntDesign

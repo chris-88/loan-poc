@@ -21,12 +21,7 @@ const DATA = [
 export default function Payments() {
   const router = useRouter();
   return (
-    <View
-      style={{
-        flex: 1,
-        padding: 16,
-      }}
-    >
+    <View style={styles.root}>
       <TouchableOpacity style={styles.button}>
         <MaterialIcons name="send" size={24} color="#0000CC" />
         <Text style={styles.text}>Send money or pay a bill</Text>
@@ -75,11 +70,12 @@ const styles = StyleSheet.create({
   root: {
     flex: 1,
     padding: 16,
+    backgroundColor: "white",
   },
   button: {
     alignItems: "center",
     padding: 12,
-    backgroundColor: "white",
+    backgroundColor: "#efefef",
     marginBottom: 8,
     flexDirection: "row",
     borderRadius: 6,

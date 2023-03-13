@@ -79,11 +79,12 @@ const styles = StyleSheet.create({
   root: {
     flex: 1,
     padding: 16,
+    backgroundColor: "white",
   },
   button: {
     alignItems: "center",
     padding: 12,
-    backgroundColor: "white",
+    backgroundColor: "#efefef",
     marginTop: 8,
     flexDirection: "row",
     borderRadius: 6,

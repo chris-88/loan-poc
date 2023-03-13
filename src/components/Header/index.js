@@ -36,7 +36,7 @@ export default function Header() {
         }}
         source={require("../../assets/images/headerLogo.png")}
       />
-      <View style={{ height: 12, backgroundColor: "transparent" }} />
+      <View style={{ height: 12, backgroundColor: "white" }} />
     </View>
   );
 }

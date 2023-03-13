@@ -16,6 +16,7 @@ export default function Register() {
         flex: 1,
         alignItems: "center",
         padding: 16,
+        backgroundColor: "white",
       }}
     >
       <PageHeading title={"Hello there!"} />

@@ -4,8 +4,8 @@ export default function PageHeading({ title }) {
   return (
     <Text
       style={{
-        fontSize: 24,
-        paddingTop: 50,
+        fontSize: 28,
+        paddingTop: 40,
         paddingBottom: 40,
         fontFamily: "OpenSans_700Bold",
         alignSelf: "center",

@@ -8,7 +8,7 @@ const Item = ({ name, img, route }) => {
       style={{
         alignItems: "center",
         padding: 16,
-        backgroundColor: "white",
+        backgroundColor: "#efefef",
         marginBottom: 16,
         flexDirection: "row",
         borderRadius: 9,
@@ -44,6 +44,7 @@ export default function apply() {
       style={{
         flex: 1,
         padding: 16,
+        backgroundColor: "white",
       }}
     >
       <Item

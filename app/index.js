@@ -4,7 +4,7 @@ import { useRouter } from "expo-router";
 export default function Page() {
   const router = useRouter();
   const onPress = () => {
-    router.push("/main/");
+    router.push("/register/");
   };
   return (
     <View style={{ backgroundColor: "#0000cc", flex: 1 }}>
@@ -45,6 +45,7 @@ export default function Page() {
           backgroundColor: "#00ffc5",
           alignItems: "center",
           justifyContent: "center",
+          borderRadius: 6,
         }}
       >
         <Text

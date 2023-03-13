@@ -51,7 +51,7 @@ function Item({ account, number, amount, id }) {
       style={{
         alignItems: "center",
         padding: 16,
-        backgroundColor: "white",
+        backgroundColor: "#efefef",
         marginBottom: 16,
         flexDirection: "row",
         justifyContent: "space-between",
@@ -98,6 +98,7 @@ export default function Accounts() {
       style={{
         flex: 1,
         padding: 16,
+        backgroundColor: "white",
       }}
     >
       <FlatList
