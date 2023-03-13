@@ -1,12 +1,12 @@
-import { View, FlatList, Text, TouchableOpacity } from "react-native";
-import { ProgressButton, PageHeading, Title } from "../../src/components";
-import { useRouter } from "expo-router";
 import { useState } from "react";
+import { View, Text, TouchableOpacity } from "react-native";
+import { ProgressButton, PageHeading, Title } from "../../../src/components";
+import { useRouter } from "expo-router";
 
 export default function LoanPage4() {
   const router = useRouter();
   const onPress = () => {
-    router.push("/loan/page5");
+    router.push("/products/loan/page5");
   };
   const [selected, setSelected] = useState(0);
   return (

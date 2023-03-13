@@ -82,6 +82,7 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     marginBottom: 8,
     flexDirection: "row",
+    borderRadius: 6,
   },
   text: {
     fontFamily: "OpenSans_400Regular",

@@ -24,7 +24,14 @@ export default function Layout() {
           headerShown: false,
         }}
       >
-        <Stack.Screen name="NeedHelp" options={{ presentation: "modal" }} />
+        <Stack.Screen
+          name="modals/NeedHelp"
+          options={{ presentation: "modal" }}
+        />
+        <Stack.Screen
+          name="modals/AccountDetails"
+          options={{ presentation: "modal" }}
+        />
       </Stack>
     </>
   );

@@ -34,10 +34,20 @@ const DATA = [
   },
 ];
 
-const Item = ({ account, number, amount }) => {
+function Item({ account, number, amount, id }) {
+  const router = useRouter();
   return (
     <TouchableOpacity
-      onPress={() => {}}
+      onPress={() =>
+        router.push({
+          pathname: "/modals/AccountDetails",
+          params: {
+            account: account,
+            number: number,
+            amount: amount,
+          },
+        })
+      }
       style={{
         alignItems: "center",
         padding: 16,
@@ -45,6 +55,7 @@ const Item = ({ account, number, amount }) => {
         marginBottom: 16,
         flexDirection: "row",
         justifyContent: "space-between",
+        borderRadius: 6,
       }}
     >
       <View>
@@ -79,10 +90,9 @@ const Item = ({ account, number, amount }) => {
       </Text>
     </TouchableOpacity>
   );
-};
+}
 
 export default function Accounts() {
-  const router = useRouter();
   return (
     <View
       style={{
@@ -97,6 +107,7 @@ export default function Accounts() {
             account={item.title}
             number={item.number}
             amount={item.balance}
+            id={item.id}
           />
         )}
       />

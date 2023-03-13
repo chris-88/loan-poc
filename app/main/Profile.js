@@ -68,6 +68,7 @@ export default function profile() {
           backgroundColor: "#0000cc",
           marginBottom: 8,
           flexDirection: "row",
+          borderRadius: 6,
         }}
       >
         <AntDesign name="logout" size={24} color="white" />
@@ -119,6 +120,7 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     marginBottom: 8,
     flexDirection: "row",
+    borderRadius: 6,
   },
   text: {
     fontFamily: "OpenSans_400Regular",

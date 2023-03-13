@@ -4,13 +4,13 @@ import {
   ProgressButton,
   TextBlock,
   Title,
-} from "../../src/components";
+} from "../../../src/components";
 import { useRouter } from "expo-router";
 
 export default function Page() {
   const router = useRouter();
   const onPress = () => {
-    router.push("/loan/page1");
+    router.push("/products/loan/page1");
   };
   return (
     <View style={{ backgroundColor: "white", flex: 1 }}>

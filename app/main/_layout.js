@@ -1,7 +1,7 @@
 import { StatusBar } from "react-native";
 import { Tabs } from "expo-router";
 import { AntDesign } from "@expo/vector-icons";
-import Header from "../../src/components/Header";
+import { Header } from "../../src/components";
 
 export default function Layout() {
   return (

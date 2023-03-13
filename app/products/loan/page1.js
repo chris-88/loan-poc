@@ -1,13 +1,16 @@
 import { View } from "react-native";
-import { ProgressButton } from "../../src/components";
-import { PageHeading, Title, ToggleButton } from "../../src/components";
+import {
+  PageHeading,
+  Title,
+  ToggleButton,
+  ProgressButton,
+} from "../../../src/components";
 import { useRouter } from "expo-router";
-import { useRef, useState } from "react";
 
 export default function LoanPage1() {
   const router = useRouter();
   const onPress = () => {
-    router.push("/loan/page2");
+    router.push("/products/loan/page2");
   };
   return (
     <View style={{ backgroundColor: "white", flex: 1 }}>

@@ -11,6 +11,7 @@ const Item = ({ name, img, route }) => {
         backgroundColor: "white",
         marginBottom: 16,
         flexDirection: "row",
+        borderRadius: 9,
       }}
     >
       <Image
@@ -53,7 +54,7 @@ export default function apply() {
       <Item
         name={"Personal loan"}
         img={require("../../src/assets/icons/loans-icon.png")}
-        route={() => router.push("/loan/")}
+        route={() => router.push("/products/loan/")}
       />
       <Item
         name={"Mortgage"}

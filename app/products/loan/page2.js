@@ -1,12 +1,12 @@
 import { KeyboardAvoidingView, View } from "react-native";
-import { ProgressButton } from "../../src/components";
 import {
   PageHeading,
   Title,
   TextBlock,
   Dropdown,
   EuroInput,
-} from "../../src/components";
+  ProgressButton,
+} from "../../../src/components";
 import { useRouter } from "expo-router";
 
 const Items = [
@@ -22,7 +22,7 @@ const Items = [
 export default function LoanPage2() {
   const router = useRouter();
   const onPress = () => {
-    router.push("/loan/page3");
+    router.push("/products/loan/page3");
   };
   return (
     <KeyboardAvoidingView style={{ backgroundColor: "white", flex: 1 }}>

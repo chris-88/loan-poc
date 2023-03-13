@@ -1,17 +1,17 @@
 import { View } from "react-native";
-import { ProgressButton } from "../../src/components";
 import {
   PageHeading,
   Title,
   ToggleButton,
   TextBlock,
-} from "../../src/components";
+  ProgressButton,
+} from "../../../src/components";
 import { useRouter } from "expo-router";
 
 export default function LoanPage3() {
   const router = useRouter();
   const onPress = () => {
-    router.push("/loan/page4");
+    router.push("/products/loan/page4");
   };
 
   return (

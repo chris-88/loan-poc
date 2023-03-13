@@ -1,8 +1,9 @@
+import { Animated, View, TouchableOpacity } from "react-native";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
+
 import accounts from "./accounts";
 import payments from "./payments";
 import cards from "./cards";
-import { Animated, View, TouchableOpacity } from "react-native";
 
 function TabBar({ state, descriptors, navigation }) {
   return (
@@ -35,7 +36,6 @@ function TabBar({ state, descriptors, navigation }) {
             accessibilityRole="button"
             accessibilityState={isFocused ? { selected: true } : {}}
             accessibilityLabel={options.tabBarAccessibilityLabel}
-            testID={options.tabBarTestID}
             onPress={onPress}
             style={{
               flex: 1,

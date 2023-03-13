@@ -1,12 +1,10 @@
 import { ScrollView, View } from "react-native";
-import { ProgressButton } from "../../src/components";
 import {
   PageHeading,
   Title,
-  Dropdown,
-  SubTitle,
   EuroInput,
-} from "../../src/components";
+  ProgressButton,
+} from "../../../src/components";
 import { useRouter } from "expo-router";
 
 const MaritalItems = [
@@ -38,7 +36,7 @@ const DependItems = [
 export default function LoanPage7() {
   const router = useRouter();
   const onPress = () => {
-    router.push("/loan/page8");
+    router.push("/products/loan/page8");
   };
   return (
     <ScrollView

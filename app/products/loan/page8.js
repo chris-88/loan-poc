@@ -1,13 +1,16 @@
 import { View, Text, ScrollView } from "react-native";
-import { ProgressButton } from "../../src/components";
-import { PageHeading, TextBlock } from "../../src/components";
+import {
+  PageHeading,
+  TextBlock,
+  ProgressButton,
+} from "../../../src/components";
 import { useRouter } from "expo-router";
 import { AntDesign } from "@expo/vector-icons";
 
 export default function LoanPage8() {
   const router = useRouter();
   const onPress = () => {
-    router.push("/loan/page9");
+    router.push("/products/loan/page9");
   };
   return (
     <ScrollView

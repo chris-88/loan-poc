@@ -1,12 +1,11 @@
-import { View, FlatList, Text, TouchableOpacity } from "react-native";
-import { ProgressButton, PageHeading, Title } from "../../src/components";
+import { View, Text } from "react-native";
+import { ProgressButton, PageHeading, Title } from "../../../src/components";
 import { useRouter } from "expo-router";
-import { useState } from "react";
 
 export default function LoanPage5() {
   const router = useRouter();
   const onPress = () => {
-    router.push("/loan/page6");
+    router.push("/products/loan/page6");
   };
   return (
     <View style={{ backgroundColor: "white", flex: 1 }}>

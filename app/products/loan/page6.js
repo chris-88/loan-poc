@@ -1,12 +1,11 @@
 import { View } from "react-native";
-import { ProgressButton } from "../../src/components";
 import {
   PageHeading,
   Title,
-  TextBlock,
   Dropdown,
   SubTitle,
-} from "../../src/components";
+  ProgressButton,
+} from "../../../src/components";
 import { useRouter } from "expo-router";
 
 const MaritalItems = [
@@ -38,7 +37,7 @@ const DependItems = [
 export default function LoanPage6() {
   const router = useRouter();
   const onPress = () => {
-    router.push("/loan/page7");
+    router.push("/products/loan/page7");
   };
   return (
     <View style={{ backgroundColor: "white", flex: 1 }}>
