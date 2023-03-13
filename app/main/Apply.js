@@ -55,7 +55,7 @@ export default function apply() {
       <Item
         name={"Personal loan"}
         img={require("../../src/assets/icons/loans-icon.png")}
-        route={() => router.push("/products/loan/")}
+        route={() => router.replace("/products/loan/")}
       />
       <Item
         name={"Mortgage"}

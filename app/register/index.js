@@ -1,4 +1,4 @@
-import { Text, View } from "react-native";
+import { Text, View, StatusBar } from "react-native";
 import { SignButton, PageHeading, TextBlock } from "../../src/components";
 import { useRouter } from "expo-router";
 
@@ -8,7 +8,7 @@ export default function Register() {
     router.push("/register/SignUp");
   };
   const handleSignIn = () => {
-    router.push("/register/Login");
+    router.replace("/sign-in");
   };
   return (
     <View
@@ -19,10 +19,11 @@ export default function Register() {
         backgroundColor: "white",
       }}
     >
+      <StatusBar hidden={false} barStyle={"light-content"} />
       <PageHeading title={"Hello there!"} />
       <TextBlock
         text={
-          "Welcome to the BOI mobile app! It doesn't look like this device is register."
+          "Welcome to the BOI mobile app! It doesn't look like this device is registered."
         }
       />
       <TextBlock

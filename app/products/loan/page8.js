@@ -10,7 +10,7 @@ import { AntDesign } from "@expo/vector-icons";
 export default function LoanPage8() {
   const router = useRouter();
   const onPress = () => {
-    router.push("/products/loan/page9");
+    router.replace("/main/Apply");
   };
   return (
     <ScrollView
@@ -159,6 +159,7 @@ export default function LoanPage8() {
         enabled={true}
         title={"Start application"}
         style={"SECONDARY"}
+        onPress={onPress}
       />
     </ScrollView>
   );
