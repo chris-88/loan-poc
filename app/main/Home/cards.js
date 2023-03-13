@@ -5,18 +5,48 @@ import {
   MaterialCommunityIcons,
   FontAwesome5,
 } from "@expo/vector-icons";
+import { useState } from "react";
 
 export default function Cards() {
   const router = useRouter();
+  const [frozen, setFrozen] = useState(false);
+  const onPress = () => {
+    setFrozen((previousState) => !previousState);
+  };
+  const frozenText = !frozen ? "Freeze card" : "Card frozen";
   return (
     <View style={styles.root}>
       <Image
         source={require("../../../src/assets/images/debit-card.png")}
         style={styles.card}
       />
-      <TouchableOpacity style={styles.button}>
-        <Ionicons name="snow-outline" size={24} color="#0000CC" />
-        <Text style={styles.text}>Freeze card</Text>
+      <TouchableOpacity
+        onPress={onPress}
+        style={{
+          alignItems: "center",
+          padding: 12,
+          backgroundColor: !frozen ? "#0000cc" : "red",
+          marginBottom: 8,
+          flexDirection: "row",
+          borderRadius: 6,
+        }}
+      >
+        <MaterialCommunityIcons
+          name={!frozen ? "snowflake" : "snowflake-off"}
+          size={24}
+          color="white"
+        />
+        <Text
+          style={{
+            fontFamily: "OpenSans_600SemiBold",
+            fontSize: 16,
+            color: "white",
+            textAlign: "center",
+            marginLeft: 16,
+          }}
+        >
+          {frozenText}
+        </Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
         <MaterialCommunityIcons

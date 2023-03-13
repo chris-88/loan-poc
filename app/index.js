@@ -4,7 +4,7 @@ import { useRouter } from "expo-router";
 export default function Page() {
   const router = useRouter();
   const onPress = () => {
-    router.push("/register/");
+    router.replace("/main/");
   };
   return (
     <View style={{ backgroundColor: "#0000cc", flex: 1 }}>
@@ -32,8 +32,8 @@ export default function Page() {
             color: "white",
           }}
         >
-          This is a POC mobile app developed by the Digital COE using Expo and
-          React Native
+          This is a POC mobile app developed by the Digital COE using React
+          Native
         </Text>
       </View>
       <TouchableOpacity

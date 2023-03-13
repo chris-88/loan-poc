@@ -22,9 +22,28 @@ export default function Payments() {
   const router = useRouter();
   return (
     <View style={styles.root}>
-      <TouchableOpacity style={styles.button}>
-        <MaterialIcons name="send" size={24} color="#0000CC" />
-        <Text style={styles.text}>Send money or pay a bill</Text>
+      <TouchableOpacity
+        style={{
+          alignItems: "center",
+          padding: 12,
+          backgroundColor: "#0000cc",
+          marginBottom: 8,
+          flexDirection: "row",
+          borderRadius: 6,
+        }}
+      >
+        <MaterialIcons name="send" size={24} color="white" />
+        <Text
+          style={{
+            fontFamily: "OpenSans_600SemiBold",
+            fontSize: 16,
+            color: "white",
+            textAlign: "center",
+            marginLeft: 16,
+          }}
+        >
+          Send money or pay a bill
+        </Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
         <MaterialCommunityIcons name="transfer" size={24} color="#0000CC" />
