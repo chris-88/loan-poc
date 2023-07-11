@@ -2,14 +2,12 @@ import { StatusBar } from "react-native";
 import { Tabs } from "expo-router";
 import { AntDesign } from "@expo/vector-icons";
 
-import Apply from "./Apply";
-import Profile from "./Profile";
-import Services from "./Services";
-
+import { AuthProvider } from "../../src/context/auth";
 import { Header } from "../../src/components";
 
 export default function Layout() {
   return (
+    // <AuthProvider>
     <>
       <StatusBar hidden={false} barStyle={"light-content"} />
       <Header />

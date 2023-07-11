@@ -1,9 +1,14 @@
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { MaterialCommunityIcons, AntDesign } from "@expo/vector-icons";
 import { useAuth } from "../../src/context/auth";
+import { useRouter } from "expo-router";
 
 export default function Profile() {
-  const { signOut } = useAuth();
+  // const { signOut } = useAuth();
+  const router = useRouter();
+  const onPress = () => {
+    router.replace("/");
+  };
   return (
     <View style={styles.root}>
       <View
@@ -49,7 +54,8 @@ export default function Profile() {
         <Text style={styles.text}>Security and Legal</Text>
       </TouchableOpacity>
       <TouchableOpacity
-        onPress={() => signOut()}
+        // onPress={() => signOut()}
+        onPress={onPress}
         style={{
           alignItems: "center",
           padding: 12,

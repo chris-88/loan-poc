@@ -4,7 +4,7 @@ import { useRouter } from "expo-router";
 export default function Page() {
   const router = useRouter();
   const onPress = () => {
-    router.replace("/main/");
+    router.replace("/(auth)/register");
   };
   return (
     <View style={{ backgroundColor: "#0000cc", flex: 1 }}>

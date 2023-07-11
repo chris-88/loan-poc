@@ -3,8 +3,8 @@ import { PageHeading, ProgressButton } from "../../src/components";
 import { useRouter } from "expo-router";
 import { TextInput } from "react-native";
 
-const ITEM_SIZE = 50;
-const DIGITS = 4;
+const ITEM_SIZE = 40;
+const DIGITS = 6;
 
 export default function SetPIN() {
   const router = useRouter();
@@ -13,15 +13,16 @@ export default function SetPIN() {
   };
 
   return (
-    <View style={{ flex: 1, backgroundColor: "white" }}>
-      <View style={{ flex: 1, padding: 16 }}>
-        <PageHeading title={"Set your login PIN"} />
+    <View style={{ backgroundColor: "white", flex: 1 }}>
+      <View style={{ padding: 16, flex: 1 }}>
+        <PageHeading title={"Please create a passcode"} />
         <View
           style={{
-            width: "70%",
+            width: "80%",
             alignSelf: "center",
             flexDirection: "row",
             justifyContent: "space-between",
+            paddingTop: 30,
           }}
         >
           {[...new Array(DIGITS)].map((item, index) => (

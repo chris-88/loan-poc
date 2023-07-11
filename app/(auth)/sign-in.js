@@ -1,12 +1,17 @@
 import { TextInput, View, StyleSheet } from "react-native";
 import { PageHeading, ProgressButton } from "../../src/components";
 import { useAuth } from "../../src/context/auth";
+import { useRouter } from "expo-router";
 
 const ITEM_SIZE = 40;
 const DIGITS = 6;
 
 export default function SignIn() {
-  const { signIn } = useAuth();
+  // const { signIn } = useAuth();
+  const router = useRouter();
+  const onPress = () => {
+    router.replace("/main");
+  };
   return (
     <View style={{ backgroundColor: "white", flex: 1 }}>
       <View style={{ padding: 16, flex: 1 }}>
@@ -37,7 +42,8 @@ export default function SignIn() {
         </View>
       </View>
       <ProgressButton
-        onPress={() => signIn()}
+        // onPress={() => signIn()}
+        onPress={onPress}
         backEnable={false}
         enabled={true}
         title={"Log In"}

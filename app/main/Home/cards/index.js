@@ -42,6 +42,8 @@ export default function Cards() {
           marginBottom: 8,
           flexDirection: "row",
           borderRadius: 6,
+          // borderColor: "#0000cc",
+          // borderWidth: !frozen ? 0 : 3,
         }}
       >
         <MaterialCommunityIcons

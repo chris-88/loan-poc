@@ -7,8 +7,6 @@ import {
   OpenSans_700Bold,
 } from "@expo-google-fonts/open-sans";
 
-import { AuthProvider } from "../src/context/auth";
-
 export default function Layout() {
   const [fontsLoaded] = useFonts({
     OpenSans_400Regular,
@@ -19,7 +17,7 @@ export default function Layout() {
     return <SplashScreen />;
   }
   return (
-    <AuthProvider>
+    <>
       <StatusBar hidden={true} />
       <Stack
         screenOptions={{
@@ -35,6 +33,6 @@ export default function Layout() {
           options={{ presentation: "modal" }}
         />
       </Stack>
-    </AuthProvider>
+    </>
   );
 }
