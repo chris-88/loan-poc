@@ -1,4 +1,4 @@
-import { Animated, View, TouchableOpacity } from "react-native";
+import { View, TouchableOpacity, Text } from "react-native";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 
 import accounts from "./accounts";
@@ -7,7 +7,13 @@ import cards from "./cards";
 
 function TabBar({ state, descriptors, navigation }) {
   return (
-    <View style={{ flexDirection: "row", backgroundColor: "white" }}>
+    <View
+      style={{
+        flexDirection: "row",
+        backgroundColor: "white",
+        paddingHorizontal: 12,
+      }}
+    >
       {state.routes.map((route, index) => {
         const { options } = descriptors[route.key];
         const label =
@@ -48,7 +54,7 @@ function TabBar({ state, descriptors, navigation }) {
               marginTop: 6,
             }}
           >
-            <Animated.Text
+            <Text
               style={{
                 color: isFocused ? "#0000cc" : "black",
                 fontFamily: "OpenSans_600SemiBold",
@@ -56,7 +62,7 @@ function TabBar({ state, descriptors, navigation }) {
               }}
             >
               {label}
-            </Animated.Text>
+            </Text>
           </TouchableOpacity>
         );
       })}
@@ -66,14 +72,10 @@ function TabBar({ state, descriptors, navigation }) {
 
 const Tab = createMaterialTopTabNavigator();
 
-export default function MyTabs() {
+export default function Layout() {
   return (
     <Tab.Navigator tabBar={(props) => <TabBar {...props} />}>
-      <Tab.Screen
-        name="Accounts"
-        component={accounts}
-        // options={{ backgroundColor: "white" }}
-      />
+      <Tab.Screen name="Accounts" component={accounts} />
       <Tab.Screen name="Payments" component={payments} />
       <Tab.Screen name="Cards" component={cards} />
     </Tab.Navigator>

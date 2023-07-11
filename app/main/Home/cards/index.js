@@ -1,31 +1,44 @@
-import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
-import { useRouter } from "expo-router";
-import {
-  Ionicons,
-  MaterialCommunityIcons,
-  FontAwesome5,
-} from "@expo/vector-icons";
 import { useState } from "react";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  Image,
+  FlatList,
+} from "react-native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+
+import ListItem from "../../../../src/components/ListItem";
+
+const DATA = [
+  { id: 1, title: "Report lost or stolen", icon: "credit-card-off-outline" },
+  { id: 2, title: "Replace damaged card", icon: "credit-card-refresh-outline" },
+  { id: 3, title: "View card PIN", icon: "credit-card-settings-outline" },
+  { id: 4, title: "set up apple pay", icon: "apple" },
+];
 
 export default function Cards() {
-  const router = useRouter();
   const [frozen, setFrozen] = useState(false);
   const onPress = () => {
     setFrozen((previousState) => !previousState);
   };
   const frozenText = !frozen ? "Freeze card" : "Card frozen";
   return (
-    <View style={styles.root}>
+    <View style={{ flex: 1, padding: 16, backgroundColor: "white" }}>
+      {/* Card image - should eventually be a horizontal scroll view of all customer cards */}
       <Image
-        source={require("../../../src/assets/images/debit-card.png")}
+        source={require("../../../../src/assets/images/debit-card.png")}
         style={styles.card}
       />
+
+      {/* Freeze Card button */}
       <TouchableOpacity
         onPress={onPress}
         style={{
           alignItems: "center",
           padding: 12,
-          backgroundColor: !frozen ? "#0000cc" : "red",
+          backgroundColor: "#00ffc5",
           marginBottom: 8,
           flexDirection: "row",
           borderRadius: 6,
@@ -34,13 +47,13 @@ export default function Cards() {
         <MaterialCommunityIcons
           name={!frozen ? "snowflake" : "snowflake-off"}
           size={24}
-          color="white"
+          color="#0000cc"
         />
         <Text
           style={{
             fontFamily: "OpenSans_600SemiBold",
             fontSize: 16,
-            color: "white",
+            color: "#0000cc",
             textAlign: "center",
             marginLeft: 16,
           }}
@@ -48,30 +61,18 @@ export default function Cards() {
           {frozenText}
         </Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
-        <MaterialCommunityIcons
-          name="credit-card-off-outline"
-          size={24}
-          color="#0000CC"
-        />
-        <Text style={styles.text}>Report lost or stolen</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
-        <MaterialCommunityIcons
-          name="credit-card-refresh-outline"
-          size={24}
-          color="#0000CC"
-        />
-        <Text style={styles.text}>Replace damaged card</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
-        <Ionicons name="ios-key-outline" size={24} color="#0000CC" />
-        <Text style={styles.text}>View card PIN</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
-        <FontAwesome5 name="apple-pay" size={24} color="#0000CC" />
-        <Text style={styles.text}>Set up apple pay</Text>
-      </TouchableOpacity>
+
+      {/* Card options list */}
+      <FlatList
+        data={DATA}
+        renderItem={({ item }) => (
+          <ListItem
+            title={item.title}
+            icon={item.icon}
+            focus={item.id == 1 ? true : false}
+          />
+        )}
+      />
     </View>
   );
 }

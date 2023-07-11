@@ -1,3 +1,4 @@
+import React from "react";
 import { Text, View, StatusBar } from "react-native";
 import { SignButton, PageHeading, TextBlock } from "../../src/components";
 import { useRouter } from "expo-router";
@@ -5,7 +6,7 @@ import { useRouter } from "expo-router";
 export default function Register() {
   const router = useRouter();
   const handleSignUp = () => {
-    router.push("/register/SignUp");
+    router.push("/sign-up");
   };
   const handleSignIn = () => {
     router.replace("/sign-in");
@@ -80,11 +81,13 @@ export default function Register() {
         title={"Continue with Apple"}
         version={"SECONDARY"}
         symbol="apple1"
+        onPress={() => alert("This hasn't been build yet... come back soon!")}
       />
       <SignButton
         title={"Continue with Google"}
         version={"SECONDARY"}
         symbol="google"
+        onPress={() => alert("This hasn't been build yet... come back soon!")}
       />
     </View>
   );

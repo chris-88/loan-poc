@@ -13,7 +13,7 @@ import {
 } from "@expo/vector-icons";
 import { Title } from "../../src/components";
 
-export default function profile() {
+export default function Services() {
   const router = useRouter();
   return (
     <ScrollView style={styles.root}>

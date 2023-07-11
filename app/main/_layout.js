@@ -1,6 +1,11 @@
 import { StatusBar } from "react-native";
 import { Tabs } from "expo-router";
 import { AntDesign } from "@expo/vector-icons";
+
+import Apply from "./Apply";
+import Profile from "./Profile";
+import Services from "./Services";
+
 import { Header } from "../../src/components";
 
 export default function Layout() {
@@ -17,7 +22,6 @@ export default function Layout() {
         <Tabs.Screen
           name="Home"
           options={{
-            headerTitle: "Home",
             tabBarIcon: ({ focused }) => (
               <AntDesign
                 name="home"
@@ -30,7 +34,6 @@ export default function Layout() {
         <Tabs.Screen
           name="Apply"
           options={{
-            headerTitle: "Apply",
             tabBarIcon: ({ focused }) => (
               <AntDesign
                 name="form"
@@ -43,7 +46,6 @@ export default function Layout() {
         <Tabs.Screen
           name="Services"
           options={{
-            headerTitle: "Services",
             tabBarIcon: ({ focused }) => (
               <AntDesign
                 name="profile"
@@ -56,7 +58,6 @@ export default function Layout() {
         <Tabs.Screen
           name="Profile"
           options={{
-            headerTitle: "Profile",
             tabBarIcon: ({ focused }) => (
               <AntDesign
                 name="user"

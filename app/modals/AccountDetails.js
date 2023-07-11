@@ -7,7 +7,7 @@ export default function AccountDetails() {
     <View style={{ flex: 1, alignItems: "center" }}>
       <View
         style={{
-          backgroundColor: "#0000CC",
+          backgroundColor: "#00ffc5",
           width: "100%",
           height: "15%",
           padding: 16,
@@ -25,7 +25,7 @@ export default function AccountDetails() {
             style={{
               fontFamily: "OpenSans_600SemiBold",
               fontSize: 26,
-              color: "white",
+              color: "#0000cc",
             }}
           >
             {params.account}
@@ -34,7 +34,7 @@ export default function AccountDetails() {
             style={{
               fontFamily: "OpenSans_400Regular",
               fontSize: 16,
-              color: "white",
+              color: "gray",
             }}
           >
             {params.number}
@@ -42,12 +42,18 @@ export default function AccountDetails() {
         </View>
         <Text
           style={{
-            fontFamily: "OpenSans_700Bold",
+            fontFamily: "OpenSans_400Regular",
             fontSize: 32,
-            color: "white",
+            color: "gray",
+            alignSelf: "flex-end",
           }}
         >
           {params.amount}
+        </Text>
+      </View>
+      <View>
+        <Text style={{ padding: 16 }}>
+          This will be a list of account transactions
         </Text>
       </View>
     </View>

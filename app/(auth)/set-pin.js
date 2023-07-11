@@ -9,7 +9,7 @@ const DIGITS = 4;
 export default function SetPIN() {
   const router = useRouter();
   const onPress = () => {
-    router.push("/main/");
+    router.push("/sign-in");
   };
 
   return (

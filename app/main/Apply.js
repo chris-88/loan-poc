@@ -37,7 +37,7 @@ const Item = ({ name, img, route }) => {
   );
 };
 
-export default function apply() {
+export default function Apply() {
   const router = useRouter();
   return (
     <View
@@ -56,6 +56,11 @@ export default function apply() {
         name={"Personal loan"}
         img={require("../../src/assets/icons/loans-icon.png")}
         route={() => router.replace("/products/loan/")}
+      />
+      <Item
+        name={"Borrowing"}
+        img={require("../../src/assets/icons/loans-icon.png")}
+        route={() => router.push("/products/savvy_calc/")}
       />
       <Item
         name={"Mortgage"}

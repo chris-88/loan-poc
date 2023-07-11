@@ -2,10 +2,10 @@ import { View, Text } from "react-native";
 import { PageHeading, ProgressButton } from "../../src/components";
 import { useRouter } from "expo-router";
 
-export default function PhoneVer() {
+export default function Verification() {
   const router = useRouter();
   const onPress = () => {
-    router.push("/register/SetPIN");
+    router.push("/set-pin");
   };
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>

@@ -2,7 +2,7 @@ import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { MaterialCommunityIcons, AntDesign } from "@expo/vector-icons";
 import { useAuth } from "../../src/context/auth";
 
-export default function profile() {
+export default function Profile() {
   const { signOut } = useAuth();
   return (
     <View style={styles.root}>

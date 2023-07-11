@@ -27,7 +27,7 @@ const CustomInput = ({ placeholder, password }) => {
 export default function SignUp() {
   const router = useRouter();
   const onPress = () => {
-    router.push("/register/PhoneVer");
+    router.push("/verification");
   };
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>

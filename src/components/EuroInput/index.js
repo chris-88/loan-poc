@@ -1,7 +1,7 @@
 import { View, TextInput } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 
-export default function EuroInput() {
+export default function EuroInput({ placeholder }) {
   return (
     <View
       style={{
@@ -24,10 +24,9 @@ export default function EuroInput() {
         <MaterialIcons name="euro-symbol" size={16} color="black" />
       </View>
       <TextInput
-        placeholder="Please enter"
+        placeholder={placeholder ? { placeholder } : "Please enter"}
         placeholderTextColor={"#ccc"}
         keyboardType="numbers-and-punctuation"
-        // keyboardType="number-pad"
         style={{ fontFamily: "OpenSans_400Regular", fontSize: 16 }}
       />
     </View>
