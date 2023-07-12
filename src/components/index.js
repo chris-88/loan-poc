@@ -10,6 +10,7 @@ import EuroInput from "./EuroInput";
 import SubTitle from "./SubTitle";
 import SignButton from "./SignButton";
 import ListItem from "./ListItem";
+import NumPad from "./NumPad";
 
 export {
   Header,
@@ -24,4 +25,5 @@ export {
   SubTitle,
   SignButton,
   ListItem,
+  NumPad,
 };
