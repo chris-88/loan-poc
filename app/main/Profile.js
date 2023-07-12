@@ -49,12 +49,16 @@ export default function Profile() {
         <AntDesign name="link" size={24} color="#0000cc" />
         <Text style={styles.text}>Open banking connections</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity
+        onPress={() => {
+          router.push("/modals/ThankYou");
+        }}
+        style={styles.button}
+      >
         <AntDesign name="lock" size={24} color="#0000cc" />
         <Text style={styles.text}>Security and Legal</Text>
       </TouchableOpacity>
       <TouchableOpacity
-        // onPress={() => signOut()}
         onPress={onPress}
         style={{
           alignItems: "center",

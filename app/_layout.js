@@ -32,6 +32,10 @@ export default function Layout() {
           name="modals/AccountDetails"
           options={{ presentation: "modal" }}
         />
+        <Stack.Screen
+          name="modals/ThankYou"
+          options={{ presentation: "transparentModal" }}
+        />
       </Stack>
     </>
   );
