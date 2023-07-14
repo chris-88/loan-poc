@@ -1,7 +1,9 @@
 import { Text, TouchableOpacity, View } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { useRouter } from "expo-router";
 
-export default function ListItem({ title, icon, focus }) {
+export default function ListItem({ title, icon, focus, back }) {
+  const router = useRouter();
   return (
     <View>
       <TouchableOpacity
@@ -12,6 +14,18 @@ export default function ListItem({ title, icon, focus }) {
           marginBottom: 8,
           flexDirection: "row",
           borderRadius: 6,
+        }}
+        onPress={() => {
+          router.replace({
+            pathname: "/modals/ThankYou",
+            params: {
+              title: "Insert Coffee...",
+              icon: "coffee-maker-outline",
+              message:
+                "Please provide your nearest developer with more coffee to ensure this feature is built the next time you see it!",
+              next: "/main/Home",
+            },
+          });
         }}
       >
         <MaterialCommunityIcons

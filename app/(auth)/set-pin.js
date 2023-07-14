@@ -6,7 +6,15 @@ import { useRouter } from "expo-router";
 export default function SetPIN() {
   const router = useRouter();
   const onPress = () => {
-    router.push("/sign-in");
+    router.replace({
+      pathname: "/modals/ThankYou",
+      params: {
+        title: "Done!",
+        icon: "onepassword",
+        message: "You're pin has been set!",
+        next: "/sign-in",
+      },
+    });
   };
   return (
     <View style={{ backgroundColor: "white", flex: 1 }}>

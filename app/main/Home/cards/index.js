@@ -8,6 +8,7 @@ import {
   FlatList,
 } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { useRouter } from "expo-router";
 
 import ListItem from "../../../../src/components/ListItem";
 
@@ -20,8 +21,21 @@ const DATA = [
 
 export default function Cards() {
   const [frozen, setFrozen] = useState(false);
+  const router = useRouter();
   const onPress = () => {
     setFrozen((previousState) => !previousState);
+    if (!frozen) {
+      router.replace({
+        pathname: "/modals/ThankYou",
+        params: {
+          title: "Card frozen",
+          icon: "snowflake-off",
+          message:
+            "Your card has been frozen. You can unfreeze it at any time right here in the app.",
+          next: "/main/Home",
+        },
+      });
+    }
   };
   const frozenText = !frozen ? "Freeze card" : "Card frozen";
   return (

@@ -10,7 +10,15 @@ export default function SignIn() {
   // const { signIn } = useAuth();
   const router = useRouter();
   const onPress = () => {
-    router.replace("/main");
+    router.replace({
+      pathname: "/modals/ThankYou",
+      params: {
+        title: "Success!",
+        icon: "lock-open-outline",
+        message: "You have logged in successfully!",
+        next: "/main",
+      },
+    });
   };
   return (
     <View style={{ backgroundColor: "white", flex: 1 }}>

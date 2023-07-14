@@ -51,7 +51,15 @@ export default function Profile() {
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => {
-          router.push("/modals/ThankYou");
+          router.replace({
+            pathname: "/modals/ThankYou",
+            params: {
+              title: "Don't panic!",
+              icon: "test-tube",
+              message: "Testy McTesterson is testing my nerves...",
+              next: "/main",
+            },
+          });
         }}
         style={styles.button}
       >
